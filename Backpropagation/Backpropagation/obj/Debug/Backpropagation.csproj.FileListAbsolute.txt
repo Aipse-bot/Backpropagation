@@ -1,0 +1,10 @@
+D:\School\CS345\Backpropagation\Backpropagation\bin\Debug\Backpropagation.exe.config
+D:\School\CS345\Backpropagation\Backpropagation\bin\Debug\Backpropagation.exe
+D:\School\CS345\Backpropagation\Backpropagation\bin\Debug\Backpropagation.pdb
+D:\School\CS345\Backpropagation\Backpropagation\obj\Debug\Backpropagation.csproj.AssemblyReference.cache
+D:\School\CS345\Backpropagation\Backpropagation\obj\Debug\Backpropagation.Form1.resources
+D:\School\CS345\Backpropagation\Backpropagation\obj\Debug\Backpropagation.Properties.Resources.resources
+D:\School\CS345\Backpropagation\Backpropagation\obj\Debug\Backpropagation.csproj.GenerateResource.cache
+D:\School\CS345\Backpropagation\Backpropagation\obj\Debug\Backpropagation.csproj.CoreCompileInputs.cache
+D:\School\CS345\Backpropagation\Backpropagation\obj\Debug\Backpropagation.exe
+D:\School\CS345\Backpropagation\Backpropagation\obj\Debug\Backpropagation.pdb
