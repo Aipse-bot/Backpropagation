@@ -173,50 +173,30 @@ namespace Backpropagation
 
         private void button4_Click(object sender, EventArgs e)
         {
-        int max= 0;
-        
-        int.TryParse(textBox12.Text, out max);
-     
+            int max= 0;
+                int t;
+            int.TryParse(textBox12.Text, out max);
+            string textFromTextBox8 = textBox8.Text;
+            int INTvalue;
+            if (int.TryParse(textFromTextBox8, out INTvalue))
+            {
+                hiddenNeurons = INTvalue;
+            }
+            else
+            {
+                hiddenNeurons = 100;
+            }
 
-                //1st step
-                nn = new NeuralNet(4, hiddenNeurons, 1);
+            //1st step
+            nn = new NeuralNet(4, hiddenNeurons, 1);
                 clickCount = 0;
 
                 //2nd step
 
-                for(int t = 0; t < max; t++)
+                for(t = 0; t < max; t++)
                 {
-                    string textFromTextBox8 = textBox8.Text;
-                    int INTvalue;
-                        if (int.TryParse(textFromTextBox8, out INTvalue))
-                        {
-                            hiddenNeurons = INTvalue;
-                        }
-                        else
-                        {
-                            hiddenNeurons = 100;
-                        }
 
-                        string textFromTextBox3 = textBox3.Text;
-                        float FLOATvalue;
 
-                        if (float.TryParse(textBox3.Text, out FLOATvalue))
-                        {
-                            textBox7.Text = textFromTextBox3;
-
-                            if (FLOATvalue <= 0.90)
-                            {
-                                clickCount++;
-                            }
-                        }
-                        else
-                        {
-                            textBox7.Text = textFromTextBox3;
-                            clickCount++;
-                        }
-
-                        textBox6.Text = hiddenNeurons + " * " + clickCount;
-                        textBox9.Text = hiddenNeurons + " * " + clickCount;
 
                 double[,] inputs = {
                         { 0.0, 0.0, 0.0, 0.0 },
@@ -263,6 +243,31 @@ namespace Backpropagation
 
                     textBox3.Text = "" + nn.getOuputData(0);
 
+                    string textFromTextBox3 = textBox3.Text;
+                    float FLOATvalue;
+
+                    if (float.TryParse(textBox3.Text, out FLOATvalue))
+                    {
+                        textBox7.Text = textFromTextBox3;
+
+                        if (FLOATvalue <= 0.90)
+                        {
+                            clickCount++;
+                        }
+                        else
+                        {
+                            break;
+                        }
+                    }
+                    else
+                    {
+                        textBox7.Text = textFromTextBox3;
+                        clickCount++;
+                    }
+
+                    textBox6.Text = hiddenNeurons + " * " + clickCount;
+                    textBox9.Text = hiddenNeurons + " * " + clickCount;
+
                     textFromTextBox3 = textBox3.Text;
                     float value;
 
@@ -274,6 +279,10 @@ namespace Backpropagation
                     {
                         textBox7.Text = "Not Float";
                     }
+            }
+                if(t == max)
+            {
+                textBox9.Text = "did not reach efficiency of  > 90%";
             }
 
         }
